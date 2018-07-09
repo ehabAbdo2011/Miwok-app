@@ -15,7 +15,7 @@
         android:contentDescription="@string/todo"
         tools:src="@mipmap/ic_launcher" />
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/text_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,25 +25,33 @@
 
         <TextView
             android:id="@+id/default_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:textSize="23sp"
-            tools:text="@string/one_A"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:gravity="start"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/white"
-            android:textStyle="bold" />
+            android:textSize="23sp"
+            android:textStyle="bold"
+            tools:text="@string/one_A" />
 
         <TextView
-            android:gravity="top"
+            android:layout_below="@id/default_text_view"
             android:id="@+id/english_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textSize="23sp"
-            tools:text="@string/one"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:gravity="top"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@android:color/white"/>
-    </LinearLayout>
+            android:textColor="@android:color/white"
+            android:textSize="23sp"
+            tools:text="@string/one" />
+        <ImageView
+            android:scaleType="center"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/play_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_arrow"/>
+    </RelativeLayout>
 </LinearLayout>
